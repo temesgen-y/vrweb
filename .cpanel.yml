@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/gebetaya/verity.gebetacloud.com/
+    - /bin/cp -R out/. $DEPLOYPATH
