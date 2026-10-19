@@ -7,6 +7,13 @@ Options -MultiViews -Indexes
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  # Send every http:// request to https:// (needs the SSL certificate to be issued first).
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # /privacy-policy -> privacy-policy.html
   RewriteCond %{REQUEST_FILENAME}.html -f
   RewriteRule ^(.+?)/?$ $1.html [L]
 </IfModule>
