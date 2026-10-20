@@ -9,7 +9,6 @@ import { siteConfig } from "@/config/site";
  * vars) and renders as a highlighted "[To confirm: …]" marker until it is set.
  */
 
-const operator = <Fact value={company.legalName} label="legal developer or company name" />;
 const privacyEmail = company.privacyEmail ? (
   <a href={`mailto:${company.privacyEmail}`}>{company.privacyEmail}</a>
 ) : (
@@ -33,8 +32,6 @@ function ContactDetails() {
     <p>
       <strong>Application:</strong> Verity
       <br />
-      <strong>Developer / Operator:</strong> {operator}
-      <br />
       <strong>Email:</strong> {privacyEmail}
       <br />
       <strong>Website:</strong> {website}
@@ -43,7 +40,6 @@ function ContactDetails() {
 }
 
 const hasPlaceholders = [
-  company.legalName,
   company.privacyEmail,
   company.accountDeletionSteps,
   company.accountDeletionUrl,
@@ -56,7 +52,6 @@ export const privacyPolicy: LegalDocument = {
   draft: hasPlaceholders,
   details: [
     { label: "Application", value: "Verity" },
-    { label: "Developer / Legal Operator", value: operator },
     { label: "Privacy Contact", value: privacyEmail },
     { label: "Website", value: website },
   ],

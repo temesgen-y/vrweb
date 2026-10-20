@@ -12,8 +12,6 @@ function env(value: string | undefined) {
 }
 
 export const company = {
-  /** Legal developer or company name that operates Verity. */
-  legalName: null as string | null,
   /** Verified in-app steps to delete an account, e.g. "Settings → Account → Delete account". */
   accountDeletionSteps: null as string | null,
   /** Public web page where people can request account deletion without the app. */

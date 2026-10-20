@@ -98,7 +98,6 @@ complete" notice until all of them are filled in:
 
 | Placeholder | Where to set it |
 | --- | --- |
-| Developer / legal company name | `legalName` in `src/config/company.ts` |
 | In-app Delete Account steps | `accountDeletionSteps` in `src/config/company.ts` |
 | Web account deletion URL | `accountDeletionUrl` in `src/config/company.ts` |
 | Official website | `NEXT_PUBLIC_SITE_URL` |
