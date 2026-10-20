@@ -99,7 +99,6 @@ complete" notice until all of them are filled in:
 | Placeholder | Where to set it |
 | --- | --- |
 | In-app Delete Account steps | `accountDeletionSteps` in `src/config/company.ts` |
-| Web account deletion URL | `accountDeletionUrl` in `src/config/company.ts` |
 | Official website | `NEXT_PUBLIC_SITE_URL` |
 
 Dates are in `policyDates` in the same file. Have the final policy reviewed by qualified counsel.

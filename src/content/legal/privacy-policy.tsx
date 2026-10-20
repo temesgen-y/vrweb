@@ -21,11 +21,6 @@ const inAppDeletion = (
     label="the actual verified navigation steps to the Delete Account feature"
   />
 );
-const webDeletion = company.accountDeletionUrl ? (
-  <a href={company.accountDeletionUrl}>{company.accountDeletionUrl}</a>
-) : (
-  <Fact value={null} label="the public account deletion request URL" />
-);
 
 function ContactDetails() {
   return (
@@ -42,7 +37,6 @@ function ContactDetails() {
 const hasPlaceholders = [
   company.privacyEmail,
   company.accountDeletionSteps,
-  company.accountDeletionUrl,
 ].some((value) => value === null);
 
 export const privacyPolicy: LegalDocument = {
@@ -494,8 +488,6 @@ export const privacyPolicy: LegalDocument = {
           </p>
           <h3>In-App Account Deletion</h3>
           <p>{inAppDeletion}</p>
-          <h3>Web-Based Account Deletion</h3>
-          <p>{webDeletion}</p>
           <h3>Account Deletion Process</h3>
           <p>
             When a valid account deletion request is received, Verity will process the deletion of the account and

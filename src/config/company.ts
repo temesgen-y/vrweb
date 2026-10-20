@@ -14,8 +14,6 @@ function env(value: string | undefined) {
 export const company = {
   /** Verified in-app steps to delete an account, e.g. "Settings → Account → Delete account". */
   accountDeletionSteps: null as string | null,
-  /** Public web page where people can request account deletion without the app. */
-  accountDeletionUrl: null as string | null,
 
   /** Privacy inbox; NEXT_PUBLIC_PRIVACY_EMAIL overrides it. */
   privacyEmail: env(process.env.NEXT_PUBLIC_PRIVACY_EMAIL) ?? "deliverygebeta@gmail.com",
