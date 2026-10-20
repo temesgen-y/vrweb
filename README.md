@@ -92,16 +92,11 @@ and the copy presents Verity as coming soon; update both when features ship.
 
 ## Privacy Policy
 
-The text lives in `src/content/legal/privacy-policy.tsx`. Each "[Insert …]" placeholder from the
-supplied policy renders as a highlighted **`[To confirm: …]`** marker, and the page shows a "Not yet
-complete" notice until all of them are filled in:
+The text lives in `src/content/legal/privacy-policy.tsx`. The privacy email is in `src/config/company.ts`
+(`NEXT_PUBLIC_PRIVACY_EMAIL` overrides it). A value left empty there renders as a highlighted
+**`[To confirm: …]`** marker, and the page shows a "Not yet complete" notice until it is filled in.
 
-| Placeholder | Where to set it |
-| --- | --- |
-| In-app Delete Account steps | `accountDeletionSteps` in `src/config/company.ts` |
-| Official website | `NEXT_PUBLIC_SITE_URL` |
-
-Dates are in `policyDates` in the same file. Have the final policy reviewed by qualified counsel.
+Dates are in `policyDates` in `src/config/company.ts`. Have the final policy reviewed by qualified counsel.
 
 ## Deployment (GitHub Pages → https://verity.gebetacloud.com)
 

@@ -15,12 +15,6 @@ const privacyEmail = company.privacyEmail ? (
   <Fact value={null} label="verified privacy support email" />
 );
 const website = <a href="https://verity.gebetacloud.com/">https://verity.gebetacloud.com/</a>;
-const inAppDeletion = (
-  <Fact
-    value={company.accountDeletionSteps}
-    label="the actual verified navigation steps to the Delete Account feature"
-  />
-);
 
 function ContactDetails() {
   return (
@@ -36,7 +30,6 @@ function ContactDetails() {
 
 const hasPlaceholders = [
   company.privacyEmail,
-  company.accountDeletionSteps,
 ].some((value) => value === null);
 
 export const privacyPolicy: LegalDocument = {
@@ -487,7 +480,18 @@ export const privacyPolicy: LegalDocument = {
             removal.
           </p>
           <h3>In-App Account Deletion</h3>
-          <p>{inAppDeletion}</p>
+          <p>Users can delete their account directly in the Verity app:</p>
+          <ol>
+            <li>Open the Verity app and go to your Profile.</li>
+            <li>Open Settings.</li>
+            <li>Tap Account.</li>
+            <li>Tap Deactivate or delete account.</li>
+            <li>Tap Delete account permanently and follow the on-screen instructions to confirm.</li>
+          </ol>
+          <p>
+            Users who want to leave Verity temporarily can choose Deactivate account instead. While an account is
+            deactivated, no one can see it or its content, and the user can reactivate it later to recover their content.
+          </p>
           <h3>Account Deletion Process</h3>
           <p>
             When a valid account deletion request is received, Verity will process the deletion of the account and
