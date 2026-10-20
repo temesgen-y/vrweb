@@ -15,11 +15,7 @@ const privacyEmail = company.privacyEmail ? (
 ) : (
   <Fact value={null} label="verified privacy support email" />
 );
-const website = siteConfig.isProductionDomainConfigured ? (
-  <a href={siteConfig.url}>{siteConfig.url.replace(/^https?:\/\//, "")}</a>
-) : (
-  <Fact value={null} label="official Verity website" />
-);
+const website = <a href="https://verity.gebetacloud.com/">https://verity.gebetacloud.com/</a>;
 const inAppDeletion = (
   <Fact
     value={company.accountDeletionSteps}
@@ -55,7 +51,6 @@ const hasPlaceholders = [
   company.registeredAddress,
   company.accountDeletionSteps,
   company.accountDeletionUrl,
-  siteConfig.isProductionDomainConfigured || null,
 ].some((value) => value === null);
 
 export const privacyPolicy: LegalDocument = {
