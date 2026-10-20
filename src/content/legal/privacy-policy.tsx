@@ -38,9 +38,6 @@ function ContactDetails() {
       <strong>Email:</strong> {privacyEmail}
       <br />
       <strong>Website:</strong> {website}
-      <br />
-      <strong>Address:</strong>{" "}
-      <Fact value={company.registeredAddress} label="legally required business contact address, if applicable" />
     </p>
   );
 }
@@ -48,7 +45,6 @@ function ContactDetails() {
 const hasPlaceholders = [
   company.legalName,
   company.privacyEmail,
-  company.registeredAddress,
   company.accountDeletionSteps,
   company.accountDeletionUrl,
 ].some((value) => value === null);

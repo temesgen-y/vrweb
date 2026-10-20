@@ -14,15 +14,13 @@ function env(value: string | undefined) {
 export const company = {
   /** Legal developer or company name that operates Verity. */
   legalName: null as string | null,
-  /** Legally required business contact address, if applicable. */
-  registeredAddress: null as string | null,
   /** Verified in-app steps to delete an account, e.g. "Settings → Account → Delete account". */
   accountDeletionSteps: null as string | null,
   /** Public web page where people can request account deletion without the app. */
   accountDeletionUrl: null as string | null,
 
-  /** Privacy inbox; falls back to the general contact inbox. */
-  privacyEmail: env(process.env.NEXT_PUBLIC_PRIVACY_EMAIL) ?? env(process.env.NEXT_PUBLIC_CONTACT_EMAIL),
+  /** Privacy inbox; NEXT_PUBLIC_PRIVACY_EMAIL overrides it. */
+  privacyEmail: env(process.env.NEXT_PUBLIC_PRIVACY_EMAIL) ?? "deliverygebeta@gmail.com",
 };
 
 /** Privacy Policy dates (ISO format). */

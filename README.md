@@ -85,7 +85,7 @@ build time, so rebuild after changing them.
   `NEXT_PUBLIC_SITE_URL=https://yourwebsite.com`, the page is at `https://yourwebsite.com/verity/`
   and the Privacy Policy at **`https://yourwebsite.com/verity/privacy-policy`**. Upload the contents
   of `out/` into the `verity/` folder on your host. Leave it empty to serve at the domain root.
-- **`NEXT_PUBLIC_PRIVACY_EMAIL`** — privacy inbox shown in the policy (falls back to the contact email).
+- **`NEXT_PUBLIC_PRIVACY_EMAIL`** — overrides the privacy inbox shown in the policy (default `deliverygebeta@gmail.com`).
 
 Feature statuses live in `src/config/features.ts`. Every feature is currently `in-development`,
 and the copy presents Verity as coming soon; update both when features ship.
@@ -99,10 +99,8 @@ complete" notice until all of them are filled in:
 | Placeholder | Where to set it |
 | --- | --- |
 | Developer / legal company name | `legalName` in `src/config/company.ts` |
-| Business contact address | `registeredAddress` in `src/config/company.ts` |
 | In-app Delete Account steps | `accountDeletionSteps` in `src/config/company.ts` |
 | Web account deletion URL | `accountDeletionUrl` in `src/config/company.ts` |
-| Privacy support email | `NEXT_PUBLIC_PRIVACY_EMAIL` (or `NEXT_PUBLIC_CONTACT_EMAIL`) |
 | Official website | `NEXT_PUBLIC_SITE_URL` |
 
 Dates are in `policyDates` in the same file. Have the final policy reviewed by qualified counsel.
