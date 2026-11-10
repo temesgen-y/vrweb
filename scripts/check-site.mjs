@@ -11,7 +11,7 @@
 const BASE = (process.env.BASE_URL ?? "http://localhost:3000").replace(/\/$/, "");
 const BASE_PATH = new URL(BASE).pathname.replace(/\/$/, "");
 
-const requiredRoutes = ["/", "/privacy-policy"];
+const requiredRoutes = ["/", "/privacy-policy", "/child-safety"];
 
 const failures = [];
 const pages = new Map(); // path -> html

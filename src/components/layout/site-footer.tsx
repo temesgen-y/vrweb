@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/primitives";
-import { mainNav, siteConfig } from "@/config/site";
+import { footerNav, siteConfig } from "@/config/site";
 import { Logo } from "./logo";
 import { ThemeToggle } from "./theme";
 
@@ -26,7 +26,7 @@ export function SiteFooter() {
 
           <nav aria-label="Footer">
             <ul className="flex flex-wrap gap-x-8 gap-y-3">
-              {mainNav.map((item) => (
+              {footerNav.map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className={linkClass}>
                     {item.label}

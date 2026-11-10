@@ -15,11 +15,14 @@ export const company = {
 
   /** Privacy inbox; NEXT_PUBLIC_PRIVACY_EMAIL overrides it. */
   privacyEmail: env(process.env.NEXT_PUBLIC_PRIVACY_EMAIL) ?? "deliverygebeta@gmail.com",
+  /** Child safety point of contact (Google Play CSAE declaration); NEXT_PUBLIC_CHILD_SAFETY_EMAIL overrides it. */
+  childSafetyEmail: env(process.env.NEXT_PUBLIC_CHILD_SAFETY_EMAIL) ?? "masresha004@gmail.com",
 };
 
-/** Privacy Policy dates (ISO format). */
+/** Policy dates (ISO format). */
 export const policyDates = {
   privacy: { effective: "2026-10-19" as string | null, lastUpdated: "2026-10-19" },
+  childSafety: { effective: "2026-11-10" as string | null, lastUpdated: "2026-11-10" },
 };
 
 export function formatPolicyDate(iso: string) {

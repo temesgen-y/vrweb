@@ -42,6 +42,9 @@ export const mainNav: NavItem[] = [
   { label: "Privacy Policy", href: "/privacy-policy" },
 ];
 
+/** Footer links: the main navigation plus legal pages that do not belong in the header. */
+export const footerNav: NavItem[] = [...mainNav, { label: "Child Safety", href: "/child-safety" }];
+
 export const joinHref = "/#join";
 
 
